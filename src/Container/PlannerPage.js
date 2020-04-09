@@ -21,7 +21,6 @@ class PlannerPage extends Component {
     })
     //get data from database
     //put into state
-    console.log('hiyaaaa', this.state)
   }
 
   render() {

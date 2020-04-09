@@ -1,9 +1,7 @@
 import React from 'react'
 
-const DayCard = ({ plan }) => {
+const DayCard = (plan) => {
   if (!plan) return null
-
-  console.log('plan date:', plan.date)
 
   return (
     <div className='day-card'>
