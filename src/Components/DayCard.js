@@ -15,9 +15,7 @@ const DayCard = (plan) => {
           <ParkDropdown />
         </div>
         <div className='day-tasks'>
-          <p>
-            holding text{plan.park} and {plan.selectedParkValue}
-          </p>
+          <p>holding text{plan.park}</p>
         </div>
       </div>
     </div>
