@@ -1,4 +1,5 @@
 import React from 'react'
+import ParkDropdown from './ParkDropdown'
 
 const DayCard = (plan) => {
   if (!plan) return null
@@ -11,18 +12,12 @@ const DayCard = (plan) => {
       <div className='day-details'>
         <div className='day-day'>
           <p>{plan.day}</p>
-          <select id='park-choice'>
-            <option value='' selected disabled hidden>
-              Where is the magic today:
-            </option>
-            <option value='magic-kingdom'>Magic Kingdom</option>
-            <option value='epcot'>Epcot</option>
-            <option value='hollywod-studios'>Hollywood Studios</option>
-            <option value='animal-kingdom'>Animal Kingdom</option>
-          </select>
+          <ParkDropdown />
         </div>
         <div className='day-tasks'>
-          <p>holding text</p>
+          <p>
+            holding text{plan.park} and {plan.selectedParkValue}
+          </p>
         </div>
       </div>
     </div>
