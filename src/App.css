@@ -88,18 +88,31 @@ small,
 .day-date {
   width: 3rem;
   text-align: center;
-  margin-top: 1.8em;
+  padding-top: 1.8em;
   padding-right: 2em;
-  margin-left: 2em;
+  padding-left: 2em;
   border-right: 1px solid darkgray;
 }
 
-.day-day {
+.day-details {
   width: 100%;
+}
+
+.day-day {
   height: 3rem;
   padding-left: 1em;
   border-bottom: 1px solid darkgray;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.day-tasks {
+  height: 78%;
+  width: 100%;
+  /* background-image: url(/images/castle-favicon.jpg); */
+}
+
+.day-tasks > p {
+  margin: 0;
 }
