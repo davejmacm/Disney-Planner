@@ -5,8 +5,21 @@ const DayCard = (plan) => {
 
   return (
     <div className='day-card'>
-      <h2>{plan.date}</h2>
-      <p>{plan.day}</p>
+      <div className='day-date'>
+        <h2>{plan.date}</h2>
+      </div>
+      <div className='day-day'>
+        <p>{plan.day}</p>
+        <select id='park-choice'>
+          <option value='' selected disabled hidden>
+            Where is the magic today:
+          </option>
+          <option value='magic-kingdom'>Magic Kingdom</option>
+          <option value='epcot'>Epcot</option>
+          <option value='hollywod-studios'>Hollywood Studios</option>
+          <option value='animal-kingdom'>Animal Kingdom</option>
+        </select>
+      </div>
     </div>
   )
 }

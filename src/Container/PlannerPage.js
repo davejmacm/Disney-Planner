@@ -17,6 +17,11 @@ class PlannerPage extends Component {
       plans: [
         { date: '23 Oct', day: 'Friday' },
         { date: '24 Oct', day: 'Awesomeday' },
+        { date: '25 Oct', day: 'Awesomeday' },
+        { date: '26 Oct', day: 'Awesomeday' },
+        { date: '27 Oct', day: 'Awesomeday' },
+        { date: '28 Oct', day: 'Awesomeday' },
+        { date: '29 Oct', day: 'Awesomeday' },
       ],
     })
     //get data from database
