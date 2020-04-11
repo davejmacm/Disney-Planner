@@ -13,10 +13,9 @@ class PlannerPage extends Component {
 
   componentDidMount() {
     db.collection('days')
-      .orderBy('date', 'asc')
+      .orderBy('id', 'asc')
       .onSnapshot((collection) => {
         const plans = collection.docs.map((doc) => doc.data())
-        console.log('DAYS', plans)
         this.setState({ plans })
       })
   }

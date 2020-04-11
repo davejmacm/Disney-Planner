@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { db } from '../Config/fire'
 
 function ParkDropdown(park) {
   const [parks] = React.useState([
@@ -8,10 +9,13 @@ function ParkDropdown(park) {
     { label: 'Hollywood Studios', value: 'Hollywood Studios' },
     { label: 'Animal Kingdom', value: 'Animal Kingdom' },
   ])
-  //   React.useEffect(() => {
-  //       setPark()
-  //   })
+
   const [value, setValue] = React.useState(park.park)
+
+  useEffect(() => {
+    db.collection('days').doc(park.date).update({ park: value })
+  })
+
   return (
     <select value={value} onChange={(e) => setValue(e.currentTarget.value)}>
       {parks.map(({ label, value }) => (
