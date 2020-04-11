@@ -9,7 +9,6 @@ const PlannerGrid = ({ plans }) => {
         date={plan.date}
         day={plan.day}
         park={plan.park}
-        selectedParkValue={plan.selectedParkValue}
         handleParkChange={plan.handleParkChange} //might just be handlePC
       />
     )
