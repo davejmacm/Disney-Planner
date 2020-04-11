@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ParkDropdown() {
+function ParkDropdown(park) {
   const [parks] = React.useState([
     { label: "Where's the magic today", value: '' },
     { label: 'Magic Kingdom', value: 'Magic Kingdom' },
@@ -11,7 +11,7 @@ function ParkDropdown() {
   //   React.useEffect(() => {
   //       setPark()
   //   })
-  const [value, setValue] = React.useState('Animal kingdom')
+  const [value, setValue] = React.useState(park.park)
   return (
     <select value={value} onChange={(e) => setValue(e.currentTarget.value)}>
       {parks.map(({ label, value }) => (

@@ -12,7 +12,7 @@ const DayCard = (plan) => {
       <div className='day-details'>
         <div className='day-day'>
           <p>{plan.day}</p>
-          <ParkDropdown />
+          <ParkDropdown park={plan.park} />
         </div>
         <div className='day-tasks'>
           <p>holding text{plan.park}</p>

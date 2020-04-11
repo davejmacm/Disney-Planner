@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { db } from '../Config/fire'
 import PlannerGrid from '../Components/PlannerGrid'
 
 class PlannerPage extends Component {
@@ -11,29 +12,17 @@ class PlannerPage extends Component {
   }
 
   componentDidMount() {
-    this.setState({
-      plans: [
-        { date: '23 Oct', day: 'Friday', park: 'Epcot' },
-        { date: '24 Oct', day: 'Awesomeday', park: 'Magic Kingdom' },
-        { date: '25 Oct', day: 'Awesomeday', park: '' },
-        { date: '26 Oct', day: 'Awesomeday', park: '' },
-        { date: '27 Oct', day: 'Awesomeday', park: '' },
-        { date: '28 Oct', day: 'Awesomeday', park: '' },
-        { date: '29 Oct', day: 'Awesomeday', park: '' },
-        {
-          date: '30 Oct',
-          day: 'Halloweenday',
-          park: 'Hollywood Studios',
-        },
-      ],
-    })
-    //get data from database
-    //put into state
+    db.collection('days')
+      .orderBy('date', 'asc')
+      .onSnapshot((collection) => {
+        const plans = collection.docs.map((doc) => doc.data())
+        console.log('DAYS', plans)
+        this.setState({ plans })
+      })
   }
 
   handleParkChange(event) {
     console.log(event.target.value)
-    this.setState({ selectedParkValue: event.target.value })
   }
 
   render() {
