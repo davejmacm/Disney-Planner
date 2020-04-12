@@ -73,10 +73,10 @@ small,
   /* overflow-y: scroll; */
 }
 .card-grid {
+  width: 60%;
   align-items: center;
 }
 .day-card {
-  width: 50rem;
   height: 14rem;
   margin-bottom: 25px;
   display: flex;
@@ -114,5 +114,26 @@ small,
 }
 
 .day-tasks > p {
-  margin: 0;
+  margin: 8px;
+}
+
+.park-dropdown {
+  display: flex;
+}
+
+@media (max-width: 920px) {
+  .card-grid {
+    width: 80%;
+  }
+}
+
+@media (max-width: 800px) {
+  .card-grid {
+    width: 90%;
+  }
+  .day-date {
+    width: 20%;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

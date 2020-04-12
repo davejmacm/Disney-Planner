@@ -17,7 +17,11 @@ function ParkDropdown(park) {
   })
 
   return (
-    <select value={value} onChange={(e) => setValue(e.currentTarget.value)}>
+    <select
+      className='park-dropdown'
+      value={value}
+      onChange={(e) => setValue(e.currentTarget.value)}
+    >
       {parks.map(({ label, value }) => (
         <option key={value} value={value}>
           {label}
