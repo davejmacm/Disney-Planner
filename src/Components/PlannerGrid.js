@@ -9,6 +9,7 @@ const PlannerGrid = ({ plans }) => {
         date={plan.date}
         day={plan.day}
         park={plan.park}
+        magicHours={plan.magicHours}
         handleParkChange={plan.handleParkChange} //might just be handlePC
       />
     )

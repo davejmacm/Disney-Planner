@@ -44,6 +44,7 @@ h2 {
 
 h3 {
   font-size: 1.728em;
+  margin: 1em;
 }
 
 h4 {
@@ -110,11 +111,42 @@ small,
 .day-tasks {
   height: 78%;
   width: 100%;
-  /* background-image: url(/images/castle-favicon.jpg); */
+  display: flex;
+  flex-direction: column;
+  /* background-image: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0) 0,
+    rgba(255, 255, 255, 0.116) 83%,
+    rgba(255, 255, 255, 0.5) 100%
+  ); */
+  background-repeat: no-repeat !important;
+  background-size: 65% auto;
+  background-position: right;
+  box-sizing: border-box;
+  position: relative;
 }
 
-.day-tasks > p {
-  margin: 8px;
+.day-tasks p {
+  margin: 0;
+  padding: 8px;
+}
+
+.day-tasks h3 {
+  text-align: center;
+}
+
+.magic-hours {
+  font-size: 0.75em;
+  position: absolute;
+  top: 0.4em;
+  right: 0.4em;
+}
+
+.magic-hours p {
+  padding: 0;
+  text-decoration: underline;
+  color: #fff;
+  text-shadow: 0px 0px 4px #000;
 }
 
 .park-dropdown {
@@ -148,5 +180,8 @@ small,
   }
   .park-dropdown {
     width: 35%;
+  }
+  .day-tasks {
+    background-size: auto 100%;
   }
 }
