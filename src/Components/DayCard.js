@@ -4,10 +4,10 @@ import ParkDropdown from './ParkDropdown'
 const DayCard = (plan) => {
   if (!plan) return null
 
-  const backgroundUrl =
-    plan.park === 'Magic Kingdom'
-      ? 'url(/images/MKday.jpg)'
-      : 'url(/images/favicon-castle.jpg)'
+  // const backgroundUrl =
+  //   plan.park === 'Magic Kingdom'
+  //     ? 'url(/images/MKday.jpg)'
+  //     : 'url(/images/favicon-castle.jpg)'
 
   // function backgroundUrl() {
   //   console.log(plan.park)

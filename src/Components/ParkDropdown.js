@@ -6,8 +6,12 @@ function ParkDropdown(park) {
     { label: "Where's the magic today", value: '' },
     { label: 'Magic Kingdom', value: 'Magic Kingdom' },
     { label: 'Epcot', value: 'Epcot' },
+    { label: 'Epcot (World Show Case)', value: 'Epcot (World Show Case)' },
     { label: 'Hollywood Studios', value: 'Hollywood Studios' },
     { label: 'Animal Kingdom', value: 'Animal Kingdom' },
+    { label: 'Disney Springs', value: 'Disney Springs' },
+    { label: 'Typhoon Lagoon', value: 'Typhoon Lagoon' },
+    { label: 'Blizzard Beach', value: 'Blizzard Beach' },
   ])
 
   const [value, setValue] = React.useState(park.park)
