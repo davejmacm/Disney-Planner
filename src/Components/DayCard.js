@@ -4,6 +4,10 @@ import ParkDropdown from './ParkDropdown'
 const DayCard = (plan) => {
   if (!plan) return null
 
+  const backgroundStyle = {
+    //for updating component background depending on park
+  }
+
   return (
     <div className='day-card'>
       <div className='day-date'>
@@ -14,7 +18,7 @@ const DayCard = (plan) => {
           <p>{plan.day}</p>
           <ParkDropdown park={plan.park} date={plan.date} />
         </div>
-        <div className='day-tasks'>
+        <div className='day-tasks' style={backgroundStyle}>
           <p>holding text{plan.park}</p>
         </div>
       </div>

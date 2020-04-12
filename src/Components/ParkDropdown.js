@@ -12,15 +12,20 @@ function ParkDropdown(park) {
 
   const [value, setValue] = React.useState(park.park)
 
+  //   const updatePark = (e) => {
+  //     setValue(e.currentTarget.value)
+  //   }
+
   useEffect(() => {
     db.collection('days').doc(park.date).update({ park: value })
-  })
+  }, [park.date, value])
 
   return (
     <select
       className='park-dropdown'
       value={value}
       onChange={(e) => setValue(e.currentTarget.value)}
+      //   onChange={updatePark}
     >
       {parks.map(({ label, value }) => (
         <option key={value} value={value}>
