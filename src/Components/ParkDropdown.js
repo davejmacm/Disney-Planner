@@ -6,7 +6,7 @@ function ParkDropdown(park) {
     { label: "Where's the magic today", value: '' },
     { label: 'Magic Kingdom', value: 'Magic Kingdom' },
     { label: 'Epcot', value: 'Epcot' },
-    { label: 'Epcot (World Show Case)', value: 'Epcot (World Show Case)' },
+    { label: 'Epcot (World Showcase)', value: 'Epcot (World Showcase)' },
     { label: 'Hollywood Studios', value: 'Hollywood Studios' },
     { label: 'Animal Kingdom', value: 'Animal Kingdom' },
     { label: 'Disney Springs', value: 'Disney Springs' },
@@ -15,10 +15,6 @@ function ParkDropdown(park) {
   ])
 
   const [value, setValue] = React.useState(park.park)
-
-  //   const updatePark = (e) => {
-  //     setValue(e.currentTarget.value)
-  //   }
 
   useEffect(() => {
     db.collection('days').doc(park.date).update({ park: value })
@@ -29,7 +25,6 @@ function ParkDropdown(park) {
       className='park-dropdown'
       value={value}
       onChange={(e) => setValue(e.currentTarget.value)}
-      //   onChange={updatePark}
     >
       {parks.map(({ label, value }) => (
         <option key={value} value={value}>

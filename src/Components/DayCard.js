@@ -4,33 +4,36 @@ import ParkDropdown from './ParkDropdown'
 const DayCard = (plan) => {
   if (!plan) return null
 
-  // const backgroundUrl =
-  //   plan.park === 'Magic Kingdom'
-  //     ? 'url(/images/MKday.jpg)'
-  //     : 'url(/images/favicon-castle.jpg)'
-
-  // function backgroundUrl() {
-  //   console.log(plan.park)
-  //   let backgroundUrl = 'abc'
-  //   if (plan.park === 'Magic Kingdom') {
-  //     backgroundUrl = 'url(/images/MKday.jpg)'
-  //     console.log(backgroundUrl)
-  //   }
-  //   if (plan.park === 'Epcot') {
-  //     backgroundUrl = 'url(/images/favicon-castle.jpg)'
-  //   }
-  //   if (plan.park === 'Hollywood Studios') {
-  //     backgroundUrl = 'url(/images/.jpg)'
-  //   }
-  //   if (plan.park === 'Animal kingdom') {
-  //     backgroundUrl = 'url(/images/.jpg)'
-  //   }
-  //   console.log(backgroundUrl)
-  //   return backgroundUrl
-  // }
-  // console.log(backgroundUrl)
-
-  //for updating component background depending on park
+  const backgroundUrl = (park) => {
+    console.log(plan.park)
+    var backgroundUrl
+    if (park === 'Magic Kingdom') {
+      backgroundUrl = 'url(/images/MKday_.jpg)'
+      console.log(backgroundUrl)
+    }
+    if (park === 'Epcot') {
+      backgroundUrl = 'url(/images/EP.jpg)'
+    }
+    if (park === 'Hollywood Studios') {
+      backgroundUrl = 'url(/images/HS.jpg)'
+    }
+    if (park === 'Animal Kingdom') {
+      backgroundUrl = 'url(/images/AK.jpg)'
+    }
+    if (park === 'Epcot (World Showcase)') {
+      backgroundUrl = 'url(/images/EWS.jpg)'
+    }
+    if (park === 'Disney Springs') {
+      backgroundUrl = 'url(/images/DS.jpg)'
+    }
+    if (park === 'Typhoon Lagoon') {
+      backgroundUrl = 'url(/images/TL.jpg)'
+    }
+    if (park === 'Blizzard Beach') {
+      backgroundUrl = 'url(/images/BB.jpg)'
+    }
+    return backgroundUrl
+  }
 
   return (
     <div className='day-card'>
@@ -44,9 +47,9 @@ const DayCard = (plan) => {
         </div>
         <div
           className='day-tasks'
-          // style={{
-          //   backgroundImage: backgroundUrl,
-          // }}
+          style={{
+            backgroundImage: backgroundUrl(plan.park),
+          }}
         >
           <p>Your plans for {plan.park}:</p>
           <h3> Coming Soon </h3>
