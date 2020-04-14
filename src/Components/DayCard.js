@@ -5,11 +5,9 @@ const DayCard = (plan) => {
   if (!plan) return null
 
   const backgroundUrl = (park) => {
-    console.log(plan.park)
     var backgroundUrl
     if (park === 'Magic Kingdom') {
       backgroundUrl = 'url(/images/MKday_.jpg)'
-      console.log(backgroundUrl)
     }
     if (park === 'Epcot') {
       backgroundUrl = 'url(/images/EP.jpg)'
