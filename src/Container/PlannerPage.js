@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { db } from '../Config/fire'
 import PlannerGrid from '../Components/PlannerGrid'
+import TimerBox from '../Components/Timers/TimerBox'
 
 class PlannerPage extends Component {
   constructor(props) {
@@ -27,6 +28,7 @@ class PlannerPage extends Component {
   render() {
     return (
       <div className='wall'>
+        <TimerBox />
         <h2>Your plans:</h2>
         <PlannerGrid
           plans={this.state.plans}

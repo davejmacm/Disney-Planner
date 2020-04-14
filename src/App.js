@@ -7,7 +7,6 @@ function App() {
     <div className='App'>
       <header className='App-header'>
         <h1>Disney Planner</h1>
-        <p>Testing font</p>
         <PlannerPage />
       </header>
     </div>

@@ -73,6 +73,40 @@ small,
   align-items: center;
   /* overflow-y: scroll; */
 }
+
+/* This section details the countdown timer styles */
+
+.timer-box {
+  height: 20rem;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(184, 214, 233, 0.85);
+  transition: 0.3s;
+  border-radius: 7px;
+  color: #fff;
+}
+
+.primary-timer {
+  height: 50%;
+}
+
+.secondary-timers {
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+}
+
+.dining-timer {
+  width: 50%;
+}
+
+.fp-timer {
+  width: 50%;
+}
+
+/* This section details the day card styles */
 .card-grid {
   width: 60%;
   align-items: center;
