@@ -237,15 +237,19 @@ h5 {
 @media (max-width: 920px) {
   .card-grid,
   .timer-box {
-    width: 80%;
+    width: 100%;
   }
+  /* .wall {
+    width: 96vw;
+  } */
 }
 
 @media (max-width: 800px) {
-  .card-grid,
+  /* .card-grid,
   .timer-box {
     width: 92%;
-  }
+  } */
+
   .day-date {
     width: 30%;
     padding-left: 0;
