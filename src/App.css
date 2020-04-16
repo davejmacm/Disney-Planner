@@ -261,9 +261,6 @@ h5 {
 }
 
 @media (max-width: 400px) {
-  .day-tasks {
-    background-size: auto 100%;
-  }
   .magic-hours {
     width: 40%;
     height: 1.5em;
