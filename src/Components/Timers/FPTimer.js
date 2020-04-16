@@ -1,6 +1,7 @@
 import React from 'react'
 
 const today = new Date()
+today.setHours(0)
 const disneyDate = new Date('2020/10/23')
 disneyDate.setDate(disneyDate.getDate() - 60)
 const DateDiff = Math.round(
