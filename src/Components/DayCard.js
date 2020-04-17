@@ -1,5 +1,7 @@
 import React from 'react'
 import ParkDropdown from './ParkDropdown'
+import TodoDiningList from './TodoDiningList'
+import TodoDiningAdd from './TodoDiningAdd'
 
 const DayCard = (plan) => {
   if (!plan) return null
@@ -49,11 +51,12 @@ const DayCard = (plan) => {
             backgroundImage: backgroundUrl(plan.park),
           }}
         >
-          <p>Your plans for {plan.park}:</p>
-          <h3> Coming Soon </h3>
           <div className='magic-hours'>
             <p>Magic Hours: {plan.magicHours}</p>
           </div>
+          <p>Your plans for {plan.park}:</p>
+          <TodoDiningAdd date={plan.date} />
+          <TodoDiningList date={plan.date} />
         </div>
       </div>
     </div>
