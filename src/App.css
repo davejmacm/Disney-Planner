@@ -230,15 +230,24 @@ h5 {
 
 /* This section covers the todo styles */
 
+.day-todos {
+  display: flex;
+  flex: row;
+  justify-content: space-around;
+}
+
 .day-todos h5 {
   padding-left: 20%;
   margin: 0;
+
+  background-color: rgba(252, 252, 252, 0.6);
 }
 
 /* This section covers the dining todo styles */
-.dining-todos {
+.dining-todos,
+.fastpass-todos {
   width: 50%;
-  /* background-color: rgba(252, 252, 252, 0.3); */
+  margin-right: 2%;
 }
 .dining-add {
   display: flex;
@@ -254,12 +263,15 @@ h5 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(252, 252, 252, 0.3);
-  box-shadow: 1px 2px rgb(51, 51, 51, 0.2);
+  margin: 1%;
+  background-color: rgba(252, 252, 252, 0.45);
+  box-shadow: 1px 2px rgb(51, 51, 51, 0.4);
 }
 
 .dining-item p {
   padding: 5px;
+
+  word-wrap: break-word;
 }
 
 .todo-delete {

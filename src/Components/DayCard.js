@@ -2,6 +2,8 @@ import React from 'react'
 import ParkDropdown from './ParkDropdown'
 import TodoDiningList from './TodoDiningList'
 import TodoDiningAdd from './TodoDiningAdd'
+import TodoFastpassList from './TodoFPList'
+import TodoFastpassAdd from './TodoFPAdd'
 
 const DayCard = (plan) => {
   if (!plan) return null
@@ -60,7 +62,10 @@ const DayCard = (plan) => {
               <TodoDiningAdd date={plan.date} />
               <TodoDiningList date={plan.date} />
             </div>
-            {/* ADD: fp-todo div and components  */}
+            <div className='fastpass-todos'>
+              <TodoFastpassAdd date={plan.date} />
+              <TodoFastpassList date={plan.date} />
+            </div>
           </div>
         </div>
       </div>
