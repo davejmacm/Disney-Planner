@@ -19,7 +19,7 @@ const TodoDiningAdd = (date) => {
   return (
     <form onSubmit={onSubmit}>
       <h5>Dining:</h5>
-      <div>
+      <div className='dining-add'>
         <input
           type='text'
           placeholder='Eating at...'
