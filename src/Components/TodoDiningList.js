@@ -34,8 +34,9 @@ const TodoDiningList = (date) => {
     <div className='dining-list'>
       {dining.map((dining) => (
         <div className='dining-item'>
-          {dining.restaurant}
+          <p>{dining.restaurant}</p>
           <button
+            className='todo-delete'
             onClick={() => deleteRestaurant(date.date, dining.id)}
           ></button>
         </div>

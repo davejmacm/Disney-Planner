@@ -55,8 +55,13 @@ const DayCard = (plan) => {
             <p>Magic Hours: {plan.magicHours}</p>
           </div>
           <p>Your plans for {plan.park}:</p>
-          <TodoDiningAdd date={plan.date} />
-          <TodoDiningList date={plan.date} />
+          <div className='day-todos'>
+            <div className='dining-todos'>
+              <TodoDiningAdd date={plan.date} />
+              <TodoDiningList date={plan.date} />
+            </div>
+            {/* ADD: fp-todo div and components  */}
+          </div>
         </div>
       </div>
     </div>

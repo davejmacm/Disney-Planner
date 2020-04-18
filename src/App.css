@@ -141,7 +141,7 @@ h5 {
   align-items: center;
 }
 .day-card {
-  height: 14rem;
+  min-height: 14rem;
   margin-bottom: 25px;
   display: flex;
   background: rgba(252, 252, 252, 0.85);
@@ -177,16 +177,10 @@ h5 {
 }
 
 .day-tasks {
-  height: 78%;
+  min-height: 78%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  /* background-image: linear-gradient(
-    to left,
-    rgba(255, 255, 255, 0) 0,
-    rgba(255, 255, 255, 0.116) 83%,
-    rgba(255, 255, 255, 0.5) 100%
-  ); */
   background-repeat: no-repeat !important;
   background-size: 100% auto;
   background-position: right;
@@ -202,11 +196,11 @@ h5 {
   text-shadow: 0px 0px 4px #000;
 }
 
-.day-tasks h3 {
+/* .day-tasks h3 {
   text-align: center;
   color: #fff;
   text-shadow: 0px 0px 4px #000;
-}
+} */
 
 .magic-hours {
   font-size: 0.75em;
@@ -232,6 +226,58 @@ h5 {
   background-size: 1.5rem 1.5rem;
   background-repeat: no-repeat;
   background-position: 95%;
+}
+
+/* This section covers the todo styles */
+
+.day-todos h5 {
+  padding-left: 20%;
+  margin: 0;
+}
+.dining-todos {
+  width: 50%;
+  /* background-color: rgba(252, 252, 252, 0.3); */
+}
+.dining-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(252, 252, 252, 0.3);
+  box-shadow: 1px 2px rgb(51, 51, 51, 0.2);
+}
+
+.dining-item p {
+  padding: 5px;
+}
+
+.todo-delete {
+  background-color: #fff;
+  background-image: url(/images/delete-icon.png);
+  background-size: auto 100%;
+  /* margin-left: 5px; */
+  font-size: 1.2em;
+  height: 1.2em;
+  width: 1.2em;
+  box-shadow: 0 5px 10px gray;
+}
+
+.todo-delete:hover {
+  transform: scale(1.15, 1.15);
+  animation: jiggle 0.5s infinite linear;
+}
+
+@keyframes jiggle {
+  0% {
+    transform: rotate(0deg) scale(1.15, 1.15);
+  }
+
+  50% {
+    transform: rotate(2deg) scale(1.15, 1.15);
+  }
+
+  100% {
+    transform: rotate(-2deg) scale(1.15, 1.15);
+  }
 }
 
 @media (max-width: 920px) {

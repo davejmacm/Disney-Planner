@@ -26,8 +26,8 @@ const TodoDiningAdd = (date) => {
           value={restaurant}
           onChange={(e) => setRestaurant(e.currentTarget.value)}
         />
+        <button>+</button>
       </div>
-      <button>+</button>
     </form>
   )
 }
