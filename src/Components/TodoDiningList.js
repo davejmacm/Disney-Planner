@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { db } from '../Config/fire'
+import DiningTimer from './Timers/DiningTimer'
 
 function useDining(doc) {
   const [dining, setDining] = useState([])
@@ -33,7 +34,7 @@ const TodoDiningList = (date) => {
   return (
     <div className='dining-list'>
       {dining.map((dining) => (
-        <div className='dining-item'>
+        <div key={dining.id} className='dining-item'>
           <p>{dining.restaurant}</p>
           <button
             className='todo-delete'

@@ -196,12 +196,6 @@ h5 {
   text-shadow: 0px 0px 4px #000;
 }
 
-/* .day-tasks h3 {
-  text-align: center;
-  color: #fff;
-  text-shadow: 0px 0px 4px #000;
-} */
-
 .magic-hours {
   font-size: 0.75em;
   position: absolute;
@@ -252,20 +246,24 @@ h5 {
 .dining-add {
   display: flex;
   width: 100%;
+  margin-bottom: 3.5%;
 }
 
 .dining-add input {
   /* display: flex; */
-  width: 80%;
+  width: 94%;
+}
+.dining-add button {
+  background-color: green;
 }
 
 .dining-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1%;
-  background-color: rgba(252, 252, 252, 0.45);
-  box-shadow: 1px 2px rgb(51, 51, 51, 0.4);
+  margin-bottom: 2%;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .dining-item p {
@@ -306,7 +304,7 @@ h5 {
 
 /* This section covers the fastpass todo styles */
 
-/* insert here */
+/* kept class names from dining as currently same expected behaviour */
 
 @media (max-width: 920px) {
   .card-grid,
@@ -321,8 +319,8 @@ h5 {
 @media (max-width: 800px) {
   .day-date {
     width: 16%;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 3%;
+    padding-right: 4%;
   }
   .park-dropdown {
     width: 35%;
@@ -342,8 +340,8 @@ h5 {
     overflow: hidden !important;
   }
 
-  .magic-hours :hover {
-    width: 100%;
+  .magic-hours:hover {
+    width: 90%;
     overflow: none;
   }
 }

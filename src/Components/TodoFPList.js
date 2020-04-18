@@ -33,7 +33,7 @@ const TodoFastpassList = (date) => {
   return (
     <div className='dining-list'>
       {fastpass.map((fastpass) => (
-        <div className='dining-item'>
+        <div key={fastpass.id} className='dining-item'>
           <p>{fastpass.ride}</p>
           <button
             className='todo-delete'

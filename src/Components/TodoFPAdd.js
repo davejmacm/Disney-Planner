@@ -18,13 +18,16 @@ const TodoFastpassAdd = (date) => {
 
   return (
     <form onSubmit={onSubmit}>
-      <h5>Fastpass:</h5>
+      <h5>
+        Fastpass<sup>+</sup>:
+      </h5>
       <div className='dining-add'>
         <input
           type='text'
-          placeholder='Eating at...'
+          placeholder='Enjoying...'
           value={ride}
           onChange={(e) => setRide(e.currentTarget.value)}
+          required
         />
         <button>+</button>
       </div>

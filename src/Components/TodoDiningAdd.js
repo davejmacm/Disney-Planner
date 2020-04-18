@@ -25,6 +25,7 @@ const TodoDiningAdd = (date) => {
           placeholder='Eating at...'
           value={restaurant}
           onChange={(e) => setRestaurant(e.currentTarget.value)}
+          required
         />
         <button>+</button>
       </div>
